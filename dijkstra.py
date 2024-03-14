@@ -2,15 +2,15 @@
 from pathlib import Path
 
 # --- Constants ---
-FILENAME = 'paths.txt'
+FILENAME = 'Romania.txt'
 
 def main():
     # = Open and read file =
     file = Path(__file__).with_name(FILENAME)
     fp = open(file, "r")
 
-    start = fp.readline().strip('\n')
-    goal = fp.readline().strip('\n')
+    # start = fp.readline().strip('\n')
+    # goal = fp.readline().strip('\n')
 
     # - Assemble path dictionary -
     paths = {}
@@ -23,6 +23,11 @@ def main():
         if not(b in paths[a].keys()):
             paths[a][b] = cost
         elif paths[a][b] > cost : paths[a][b] = cost
+
+
+    # = Reading in user input =
+    start = input("Starting location: ")
+    goal = input("Destination: ")
 
 
     # = Searching algorithm =
