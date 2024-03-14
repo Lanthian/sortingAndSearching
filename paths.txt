@@ -1,0 +1,7 @@
+alexandra
+athens
+alexandra,grace,1
+alexandra,paris,2
+grace,zheani,1
+zheani,athens,2
+paris,athens,1
